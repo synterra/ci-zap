@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  # Example docker-compose service for zap:
+  zap:
+    image: drydockcloud/ci-zap:latest
+    command: autotest
+    depends_on:
+      - web
+    volumes:
+      - ./results:/results
